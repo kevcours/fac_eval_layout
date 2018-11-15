@@ -8,13 +8,117 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Eval Layout</title>
 		<link rel="stylesheet" href="css/style.css">
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			.container{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;	
+			}
+			.container img {
+				width: 100%;
+				box-sizing: border-box;
+				padding: 1%;
+			}
+
+			.txtcenter{
+				text-align: center;
+			}
+			.telephone {
+				text-align: center;
+			}
+			.tablette{
+				display: none;
+				text-align: center;
+			}
+
+			.desktop{
+				display: none;
+				text-align: center;
+			}
+
+			.desktopG{
+				display: none;
+				text-align: center;
+			}
+
+			@media all and (min-width: 769px)
+			{
+				.telephone {
+					display: none;
+				}
+
+				.tablette {
+					display:block;
+				}
+
+				.container img{
+					width: 	50%;
+				}
+			}
+
+			@media all and (min-width: 971px)
+			{	
+
+				.tablette{
+					display: none;
+				}
+
+				.desktop{
+					display: block;
+				}
+				.container{
+					width: 75%;
+					margin:0 auto;
+				}
+			}
+
+			@media all and (min-width: 1371px)
+			{
+				.desktop{
+					display: none;
+				}
+
+				.desktopG{
+					display: block;
+				}
+
+				.container{
+
+					flex-direction: row;
+				}
+
+				.container img{
+					width: 25%;
+				}
+
+
+			}
+	
+
+
+
+		</style>
 	</head>
 	<body>
+
+
 		<h1 class="txtcenter">Evaluation  Layout</h1>
-		<h2 class="desktopG txtcenter">Vue Desktop > 1370px</h2>
-		<h2 class="desktop txtcenter">Vue Desktop</h2>
-		<h2 class="tablette txtcenter">Vue Tablette à 768px à 970px</h2>
-		<h2 class="telephone txtcenter">Vue Téléphone à 320px</h2>
+		<h2 class="desktopG">Vue Desktop > 1370px</h2>
+		<h2 class="desktop ">Vue Desktop</h2>
+		<h2 class="tablette ">Vue Tablette à 768px à 970px</h2>
+		<h2 class="telephone ">Vue Téléphone à 320px</h2>
+		<div class="container">	
+			<img src="./img/mer.jpg">	
+			<img src="./img/lac.jpg">		
+			<img src="./img/montagne.jpg">	
+			<img src="./img/foret.jpg">
+
+			</div>
+		</div>
 
 
 
